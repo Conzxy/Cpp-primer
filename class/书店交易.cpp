@@ -1,35 +1,34 @@
-//Ê¹ÓÃ2.6.1½ÚÁ·Ï°¶¨ÒåµÄsales_dataÀàÎª1.6½ÚµÄ½»Ò×³ÌĞò±àĞ´Ò»¸öĞÂ°æ±¾
 #include<iostream>
 #include"sales_data.h"
 using namespace std;
 int main(int argc,char **argv)
 {
-	sales_data total;//±£´æÏÂÒ»Ìõ½»Ò×¼ÇÂ¼µÄ±äÁ¿
-	//¶ÁÈëµÚÒ»Ìõ½»Ò×¼ÇÂ¼£¬²¢È·±£ÓĞÊı¾İ¿ÉÒÔ´¦Àí
+	sales_data total;//ä¿å­˜ä¸‹ä¸€æ¡äº¤æ˜“è®°å½•çš„å˜é‡
+	//è¯»å…¥ç¬¬ä¸€æ¡äº¤æ˜“è®°å½•ï¼Œå¹¶ç¡®ä¿æœ‰æ•°æ®å¯ä»¥å¤„ç†
 	if (read(cin, total)){
-		sales_data trans;//±£´æºÍµÄ±äÁ¿
-		//¶ÁÈë²¢´¦ÀíÊ£Óà½»Ò×¼ÇÂ¼
+		sales_data trans;//ä¿å­˜å’Œçš„å˜é‡
+		//è¯»å…¥å¹¶å¤„ç†å‰©ä½™äº¤æ˜“è®°å½•
 			while (read(cin, trans)) {
-				//Èç¹ûÈÔÔÚ´¦ÀíÏàÍ¬µÄÊé
-				if (total.isbn() == trans.isbn())//error:total.bookNo==trans.bookNo ²»×¼·ÃÎÊprivate
-					total.combine(trans);//¸üĞÂ×ÜÏúÊÛ¶î£¬×ÜÊÕÈë
+				//å¦‚æœä»åœ¨å¤„ç†ç›¸åŒçš„ä¹¦
+				if (total.isbn() == trans.isbn())//error:total.bookNo==trans.bookNo ä¸å‡†è®¿é—®private
+					total.combine(trans);//æ›´æ–°æ€»é”€å”®é¢ï¼Œæ€»æ”¶å…¥
 				else {
-					//´òÓ¡Ç°Ò»±¾ÊéµÄ½á¹û
-					cout << "Ç°Ò»±¾ÊéµÄISBNÂë:";
+					//æ‰“å°å‰ä¸€æœ¬ä¹¦çš„ç»“æœ
+					cout << "å‰ä¸€æœ¬ä¹¦çš„ISBNç :";
 					print(cout, total) << endl;
-					total = trans;//totalÏÖÔÚ±íÊ¾ÏÂÒ»±¾ÊéµÄÏúÊÛ¶î
+					total = trans;//totalç°åœ¨è¡¨ç¤ºä¸‹ä¸€æœ¬ä¹¦çš„é”€å”®é¢
 					system("pause");
-						//Ä¬ÈÏ¸³Öµ£º
+						//é»˜è®¤èµ‹å€¼ï¼š
 						//total.bookNo=trans.bookNo;
 						//total.units_sold=trans.units.sold;
 						//total.revenue=trans.revenue;
 				}
 			}
-			cout << "×îºóÒ»±¾ÊéµÄISBNÂë:";
-		print(cout, total) << endl;//´òÓ¡×îºóÒ»±¾ÊéµÄ½á¹û
+			cout << "æœ€åä¸€æœ¬ä¹¦çš„ISBNç :";
+		print(cout, total) << endl;//æ‰“å°æœ€åä¸€æœ¬ä¹¦çš„ç»“æœ
 	}
 	else {
-		cerr << "NO data?!" << endl;//Êä³ö´íÎóĞÅÏ¢
+		cerr << "NO data?!" << endl;//è¾“å‡ºé”™è¯¯ä¿¡æ¯
 	}
 	return 0;
 }
