@@ -4,7 +4,7 @@
 
 #include<iostream>
 #include<string>
-using namespace std;
+using std::cin; using std::cout; using std::endl; using std::string; using std::ostream; using std::istream;
 class sales_data {
 	//friends of this class
 	friend sales_data add(const sales_data&, const sales_data&);
@@ -20,7 +20,7 @@ public:
 	//无论何时，只要类的对象被创建，就会执行构造函数
 	sales_data() = default;//default constructor
 	sales_data(const string& s) :bookNo(s) {}//编译器将赋予其他成员默认值（在此可要可不要）
-	sales_data(const string& s, unsigned n, double p) :bookNo(s), units_sold(n), revenue(p) {}
+	sales_data(const string& s, unsigned n, double p) :bookNo(s), units_sold(n), revenue(p*n) {}
 	sales_data(istream& is) { read(is, *this); }//从is读取一条信息后存入this对象中（this=sales_data *const)
 	//member functions
 	string isbn()const { return bookNo; }//返回书的ISBN编号
@@ -34,7 +34,7 @@ private:
 	unsigned units_sold = 0;	//表示书的销量
 	double revenue = 0.0;		//表示书的总销售收入
 };
-//非成员接口函数(non-member interface functions)
+//非成员接口函数(nonmember interface functions)
 sales_data add(const sales_data&, const sales_data&);//执行两个Sales_data对象的加法
 ostream& print(ostream&, const sales_data&);		//将Sales_data对象的值输出到ostream
 istream& read(istream&, sales_data&);				//将数据从istream读入到Sales_data对象中
@@ -72,4 +72,5 @@ sales_data add(const sales_data& rhs, const sales_data& lhs) {
 	sum.combine(lhs);
 	return sum;
 }
+
 #endif

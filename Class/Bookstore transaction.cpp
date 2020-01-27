@@ -29,6 +29,7 @@ int main(int argc, char** argv)
 	}
 	else {
 		cerr << "NO data?!" << endl;//Êä³ö´íÎóÐÅÏ¢
+		return -1;
 	}
 	return 0;
 }
