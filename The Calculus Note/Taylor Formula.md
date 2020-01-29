@@ -7,7 +7,8 @@ Taylor Formula
 $$
 p(x)=a_0+a_1x+a_2x^2+a_3x^3+...+a_nx^n,
 $$
+
 则逐次将它微分n次:
 $$
-p'(x)=a_1+2\cdot
+p'(x)=a_1+2\cdotpa_2x
 $$
