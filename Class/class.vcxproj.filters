@@ -30,6 +30,15 @@
     <ClInclude Include="ex7_15.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ex7_21.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ex7_22.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ex7_24.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bookstore transaction.cpp">

@@ -1,19 +1,19 @@
 //
-//ex7_12.h
+//ex7_21.h
 //
-//created by tsubaki-san on 20/1/26
+//created by tsubaki-san on 20/1/28
 //
 
-#ifndef EX7_12_H
-#define EX7_12_H
+#ifndef EX7_21_H
+#define EX7_21_H
 
 #include<iostream>
 #include<string>
 
-class sales_data;
-std::istream& read(std::istream&, sales_data&);//需事先声明，否则22行read找不到标识符
-
 class sales_data {
+	friend sales_data add(const sales_data&, const sales_data&);
+	friend std::ostream& print(std::ostream&, const sales_data&);
+	friend std::istream& read(std::istream&, sales_data&);
 public:
 	sales_data() = default;
 	sales_data(const std::string& s) :bookNo(s) {}
@@ -29,7 +29,7 @@ public:
 	sales_data& combine(const sales_data&);
 };
 sales_data add(const sales_data&, const sales_data&);
-
+std::istream& read(std::istream&, sales_data&);
 std::ostream& print(std::ostream&, const sales_data&);
 
 //member functions

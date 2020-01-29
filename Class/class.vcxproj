@@ -179,6 +179,9 @@
     </ClInclude>
     <ClInclude Include="ex7_12.h" />
     <ClInclude Include="ex7_15.h" />
+    <ClInclude Include="ex7_21.h" />
+    <ClInclude Include="ex7_22.h" />
+    <ClInclude Include="ex7_24.h" />
     <ClInclude Include="sales_data.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
