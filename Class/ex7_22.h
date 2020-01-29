@@ -46,24 +46,3 @@ std::ostream& print(std::ostream& os, const Person &item) {
 }
 
 #endif
-/*class Solution {
-public:
-	int maxArea(vector<int>& height) {
-		if (height.empty()) return 0;
-		vector<int>::iterator b, e;
-		b = height.begin();
-		e = height.end() - 1;
-		int result = 0;
-		while (b < e) {
-			if (*b > * e) {
-				result = result < (int)(e - b) * (*e) ? (int)(e - b) * (*e) : result;
-				e--;
-			}
-			else {
-				result = result < (int)(e - b) * (*b) ? (int)(e - b) * (*b) : result;
-				b++;
-			}
-		}
-		return result;
-	}
-};*/
