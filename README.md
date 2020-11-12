@@ -1,2 +1,3 @@
 # Cpp-primer
-本人大一生，自学C++.ing
+C艹 primer exercise and note
+
