@@ -76,7 +76,7 @@ Token& Token::operator=(char c)noexcept{
     return *this;
 }
 
-Token& Token::operator=(string s)noexcept{
+Token& Token::operator=(string const& s)noexcept{
     if(tok==STR)
         sval=s;
     else

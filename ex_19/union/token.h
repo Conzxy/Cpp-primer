@@ -34,7 +34,7 @@ public:
     Token& operator=(int i)noexcept;
     Token& operator=(double d)noexcept;
     Token& operator=(char c)noexcept;
-    Token& operator=(std::string s)noexcept;
+    Token& operator=(std::string const& s)noexcept;
     ~Token();
 
     int    getINT()noexcept{ return ival; }
